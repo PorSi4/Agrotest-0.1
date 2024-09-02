@@ -380,7 +380,7 @@ nav ul li:hover {
     margin-top: 20px;
 }
 
-#btn_product {
+.btn_product {
     border-radius: 30px;
     border: 2px solid #000000;
     background-color: #18d118;
