@@ -104,7 +104,7 @@ function updateCart() {
 
         const cartBox = document.createElement("div");
         cartBox.classList.add("cart_box");
-
+        // po
         cartBox.innerHTML = `
             <img src="${item.img}" alt="${item.name}">
             <div class="detail_box">
