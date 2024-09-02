@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.cart_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo span {
+    color: #18d118;
+}
+
+.navbar {
+    background: #2c2c2c;
+    color: white;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10x 0px 10px #2c2c2c;
+    z-index: 99;
+
+
+}
+
+.id_navbar a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+
+}
+
+.id_navbar a:hover {
+    list-style: none;
+    text-decoration: none;
+    border-bottom: 1px solid #18d118;
+
+}
+
+
+.navbar>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar_content {
+    max-width: 1300px;
+    margin-inline: 2rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.navbar_content nav {
+    display: grid;
+}
+
+.navbar_icons {
+    font-size: 35px;
+    display: flex;
+    cursor: pointer;
+    margin-left: 8rem;
+
+
+}
+
+
+.cart {
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    padding: 20px;
+    width: 22rem;
+    background-color: rgb(24, 22, 22);
+
+    right: -100%;
+    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+    transition: right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.cart.active {
+    right: 0;
+    transition: right 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.total_tittle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+
+}
+
+.total_price {
+    font-size: 1.075rem;
+    margin: 1.1rem 0 0 0.8rem;
+}
+
+.btn_buy {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    width: 50%;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background: #18d118;
+    color: #2c2c2c;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#close_cart {
+    top: 1rem;
+    position: absolute;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.cart_box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+}
+
+.cart_box img {
+    width: 100px;
+    height: 100px;
+    object-position: center;
+    object-fit: contain;
+    padding: 10px;
+
+
+}
+
+.detail_box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart_product_tittle {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cart_price {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cart_quantity {
+    border: 1px solid white;
+    outline-color: #18d118;
+    width: 2.8rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+
+
+.btn_buy:hover {
+    background: white;
+    transform: scale(1.1);
+
+}
+
+
+.cart_tittle {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+
+
+}
+
+.total {
+    font-size: 15px;
+}
+
+
+
+
+.navbar_icons i {
+    color: white;
+
+
+}
+
+
+
+nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    font-weight: bold;
+
+
+
+}
+
+nav ul li {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    
+    transform: scale(1.1);
+
+}
+
+.header_main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #136719;
+    background: linear-gradient(to top, #136719 0%, #000000 50%);
+
+
+
+
+
+}
+
+.header_content {
+    color: white;
+
+
+
+
+    z-index: 1;
+}
+
+.header_content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0rem;
+
+}
+
+.header_content p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.video_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: black;
+
+}
+
+.shadow_video {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9) transparent;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+}
+
+
+.text_produto {
+    margin-top: 7rem;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.text_bar {
+    width: 8rem;
+    height: 5px;
+    background-color: #18d118;
+    border-radius: 20px;
+    margin-left: 55.5rem;
+    margin-top: 10px;
+
+
+
+}
+
+.container_produtos {
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+
+
+}
+
+.itens_produtos {
+    width: 250px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+
+
+
+
+}
+
+.itens_produtos img {
+    width: 100%;
+    height: 120px;
+}
+
+.product_tittle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.product_price {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+#btn_product {
+    border-radius: 30px;
+    border: 2px solid #000000;
+    background-color: #18d118;
+    margin-top: 30px;
+    height: 2rem;
+    width: 10rem;
+    box-sizing: border-box;
+}
+
+#close_cart {
+    top: 1rem;
+    position: absolute;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Contêiner do carrinho */
+.cart {
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    width: 22rem;
+    background-color: rgb(24, 22, 22);
+    right: -100%;
+    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+    transition: right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Contêiner dos produtos do carrinho */
+#cartContent {
+    padding: 1rem;
+    max-height: 60vh; /* Ajuste conforme necessário */
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+}
+
+/* Cada item do carrinho */
+.cart_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Adiciona um contexto para os posicionamentos absolutos dos botões */
+}
+
+/* Estilo da imagem do produto */
+.cart_box img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Detalhes do produto */
+.detail_box {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* Título do produto */
+.cart_product_tittle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1.3rem;
+}
+
+/* Preço do produto */
+.cart_price {
+    font-size: 1rem;
+    margin-left: 1.3rem;
+    
+}
+
+/* Contêiner para a quantidade e botões */
+.cart_quantity_container {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+/* Botão de diminuir quantidade */
+.cart_decrease,
+.cart_increase {
+    border: none;
+    background-color: #18d118;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Botão de remover item */
+.cart_remove {
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #18d118;
+    padding-top: 3.1rem;
+    
+}
+
+/* Margem para botões de + e - */
+.cart_decrease {
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #18d118;
+    padding-bottom: 5px;
+    padding-right: 2px;
+    
+}
+
+.cart_increase {
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #18d118;
+    margin: auto 0;
+    
+}
+
+/* Campo de quantidade */
+.cart_quantity {
+    width: 3rem;
+    height: 2rem;                  /* Define a altura do input */
+    padding: 3px;                  /* Adiciona padding */
+    text-align: center;            /* Centraliza o texto horizontalmente */
+    line-height: 1.5rem;           /* Ajusta a altura da linha para centralizar o texto verticalmente */
+    border: 1px solid #ccc;        /* Borda ao redor do input */
+    border-radius: 4px;            /* Bordas arredondadas */
+    font-size: 1rem;               /* Tamanho da fonte do número */
+    background-color: #f4f4f4;     /* Cor de fundo do input */
+    pointer-events: none;           /* Desativa interações do usuário */
+    box-sizing: border-box;        /* Inclui padding e borda no cálculo da largura e altura */
+    padding-left: 1rem;
+}
+
+#cart_icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.empty_cart_message {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+    display: none;
+    
+}
+
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70vw; /* Aumentar a largura do modal */
+    height: 80vh; /* Definir a altura do modal */
+    max-width: 1200px; /* Limitar a largura máxima */
+    max-height: 800px; /* Limitar a altura máxima */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 0.5s ease-out;
+    overflow: hidden; /* Evitar rolagem dentro do modal */
+}
+
+/* Estilo para o iframe dentro do modal */
+.modal-content iframe {
+    width: 100%;
+    height: 90%; /* Ajuste conforme necessário para caber no modal */
+    border: none; /* Remover a borda do iframe */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilo para o botão de fechamento */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001; /* Certifique-se de que o botão fique sobreposto ao conteúdo do modal */
+    font-size: 1.5rem; /* Aumentar o tamanho do ícone do botão */
+}
+
+/* Corrigir o tamanho do botão de fechar */
+.modal-close i {
+    font-size: 1.2rem;
+}
+
+/* Exibir o modal ao clicar no botão de compra */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Garantir que o overlay do modal cubra toda a tela */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#loginRegisterModal {
+    display: none; /* O modal está oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+}
+
+/* Conteúdo do modal */
+#modalContent {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slide-down 0.3s ease-out;
+}
+
+/* Animação de abertura */
+@keyframes slide-down {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* Fechar modal */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+    color: #000;
+}
+
+/* Formulário de Login e Registro */
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#loginForm, #registerForm {
+    display: none;
+    width: 100%;
+    
+}
+
+#loginForm.active, #registerForm.active {
+    display: block;
+}
+
+/* Estilo dos títulos */
+#loginTitle, #registerTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Campos de entrada */
+#loginEmail, #loginPassword, #registerName, #registerEmail, #registerPassword {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#loginEmail:focus, #loginPassword:focus, #registerName:focus, #registerEmail:focus, #registerPassword:focus {
+    border-color: #18d118;;
+    outline: none;
+}
+
+/* Botões de ação */
+#loginButton, #registerButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #18d118;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#loginButton:hover, #registerButton:hover {
+    background-color: #18d118;
+}
+
+/* Link para alternar entre login e registro */
+#switchToRegister, #switchToLogin {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+#switchToRegister a, #switchToLogin a {
+    color: #18d118;;
+    text-decoration: none;
+}
+
+#switchToRegister a:hover, #switchToLogin a:hover {
+    text-decoration: underline;
+}

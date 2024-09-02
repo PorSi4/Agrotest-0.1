@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Falhou</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .icon {
+            font-size: 48px;
+            color: #f44336; /* Vermelho para erro */
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        .button {
+            margin-top: 2rem;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff; /* Cor do botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">❌</div>
+        <div class="message">Que pena, algo deu errado😥 <br>Verifique seus dados e tente novamente.</div>
+        <a href="/" class="button">Página Inicial</a>
+    </div>
+
+    <script>
+        // Função para redirecionar para a página inicial quando o botão for clicado
+        document.querySelector('.button').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '/'; // Redirecionar para a página inicial ou para onde desejar
+        });
+    </script>
+</body>
+</html>

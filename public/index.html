@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Jardim Virtual</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="navbar_content">
+            <h1 class="logo"><span>JARDIM</span> VIRTUAL</h1>
+
+            <nav class="navbar_itens">
+                <ul>
+                    <li class="id_navbar"><a href="#inicio">Inicio</a></li>
+                    <li class="id_navbar"><a href="#produto">Produtos</a></li>
+                    <li class="id_navbar"><a href="#contato">Contato</a></li>
+                    <li class="id_navbar"><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+            <!-- Carrinho de Compras -->
+            <div id="cart" class="cart">
+                <span id="close_cart">&times;</span>
+                <h2 class="cart_tittle">Carrinho de Compras</h2>
+                <div id="emptyCartMessage" class="empty_cart_message">Seu carrinho está vazio!!!</div>
+                <div id="cartContent"></div>
+                <div class="total">
+                    <div class="total_tittle">Total:</div>
+                    <div id="totalPrice" class="total_price">R$0.00</div>
+                </div>
+                <button class="btn_buy">Comprar</button>
+
+            </div>
+
+            <!-- Ícone do Carrinho -->
+            <i class='bx bx-shopping-bag' id="cart_icon"></i>
+
+        </div>
+    </div>
+
+    <div id="inicio"></div>
+    <section class="header_main">
+        <video autoplay loop muted class="video_back">
+            <source src="" type="video/mp4">
+        </video>
+        <div class="shadow_video"></div>
+        <div class="header_content">
+            <div class="header_text">
+                <h2>Conectando produtores aos melhores Itens e soluções</h2><br>
+                <p>Facilitamos acesso a recursos agrícolas essenciais, oferecendo recomendações personalizadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <h1 id="produto" class="text_produto">Produtos</h1>
+    <div class="text_bar"></div>
+
+    <!-- Adicione este código onde você deseja que o iframe apareça -->
+
+    <div id="customerFormModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="modal-preencher">
+            <button class="modal-close" id="closeCustomerForm">&times;</button>
+            <h2>Informações do Cliente</h2>
+            <form id="customerForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="houseNumber">Número da Casa:</label>
+                <input type="text" id="houseNumber" name="houseNumber" required>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Ir para o Checkout</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginRegisterModal" class="modal">
+        <div id="modalContent" class="modal-content">
+            <span id="closeModal" class="modal-close">&times;</span>
+
+            <div id="formContainer">
+                <div id="loginForm">
+                    <h2 id="loginTitle">Login</h2>
+                    <form id="login" method="POST">
+                        <input id="loginEmail" type="email" placeholder="Email" required>
+                        <input id="loginPassword" type="password" placeholder="Password" required>
+                        <button id="loginButton" type="submit">Login</button>
+                        <p id="switchToRegister">Não tem uma conta? <a href="#" id="showRegister">Registre-se</a></p>
+                    </form>
+                </div>
+
+                <div id="registerForm">
+                    <h2 id="registerTitle">Registrar</h2>
+                    <form id="register" method="POST">
+                        <input id="registerName" type="text" placeholder="Nome do Usuario" required>
+                        <input id="registerEmail" type="email" placeholder="Email" required>
+                        <input id="registerPassword" type="password" placeholder="Password" required>
+                        <button id="registerButton" type="submit">Registrar</button>
+                        <p id="switchToLogin">Já tem uma conta? <a href="#" id="showLogin">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container_produtos">
+
+            <div class="itens_produtos">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNooljNs7H2E08HkYCDgEYUgbUDVhDBvfFdnZ6KqqMTW1Fc-NzrEjc7y8xMPKoA3kOlCE6gGiy1qpFi4YrFeJHAoJYiF05cmjNnpg8iVMdaHL319ng7rS1I9m_XadTMxA1ZYodcLU8Qg3UPtIyN9Y4N026oKNtgZWk6R_so1Lxxx7sDSCdVVjBvBwL2ek/w320-h213/Qual%20o%20melhor%20momento%20para%20colher%20milho%20para%20silagem_.jpeg"
+                    alt="">
+                <h3 class="product_tittle">Silagem</h3>
+                <p class="product_price">R$12,00</p>
+                <button class="btn_product"
+                    onclick="addToCart('Silagem', 12, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNooljNs7H2E08HkYCDgEYUgbUDVhDBvfFdnZ6KqqMTW1Fc-NzrEjc7y8xMPKoA3kOlCE6gGiy1qpFi4YrFeJHAoJYiF05cmjNnpg8iVMdaHL319ng7rS1I9m_XadTMxA1ZYodcLU8Qg3UPtIyN9Y4N026oKNtgZWk6R_so1Lxxx7sDSCdVVjBvBwL2ek/w320-h213/Qual%20o%20melhor%20momento%20para%20colher%20milho%20para%20silagem_.jpeg')">Adicionar
+                    ao carrinho</button>
+            </div>
+            <div class="itens_produtos">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL_W0w3PwLcvYWgxEYDM7cGa9IPbZLdS0pGMprl3rCG7WIzC66qrgIKqS32e2wrgjLbqSwOgr9N-bZ61vOeh8Fv8D4_0FD4LebTuumF7Kmr5ZkcTaH1MiVNNbTApm3i4SMaRlsfYbRV-IuXhgofcnwDrd7QxMfekl_AZosOUYpDLyaL8RdLtmLnFY3oJE/w320-h183/Cultivo%20de%20Soja.jpeg"
+                    alt="">
+                <h3 class="product_tittle">Soja</h3>
+                <p class="product_price">R$12,00</p>
+                <button class="btn_product"
+                    onclick="addToCart('Soja', 12, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL_W0w3PwLcvYWgxEYDM7cGa9IPbZLdS0pGMprl3rCG7WIzC66qrgIKqS32e2wrgjLbqSwOgr9N-bZ61vOeh8Fv8D4_0FD4LebTuumF7Kmr5ZkcTaH1MiVNNbTApm3i4SMaRlsfYbRV-IuXhgofcnwDrd7QxMfekl_AZosOUYpDLyaL8RdLtmLnFY3oJE/w320-h183/Cultivo%20de%20Soja.jpeg')">Adicionar
+                    ao carrinho</button>
+            </div>
+            <div class="itens_produtos">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6zp6_k18lYeQeQkV4aAka0Ckqnd_UgJNg3PYg9aZQ21DhmZGLCWqlhpRCO35Ht6ruuPzFxD6jxjCqak4djZo_VQzy51MeNIr_7K5mgxhxl8NunxwaUg13gHaPhl3ZjGDwGNqzMBwUwNSwHwQ2x4aV2oIbNijB1FMKGWcXIUVrztiwz-ckje_TsHyxvSw/w320-h213/A%20hist%C3%B3ria%20do%20arroz.jpeg"
+                    alt="">
+                <h3 class="product_tittle">Arroz</h3>
+                <p class="product_price">R$12,00</p>
+                <button class="btn_product"
+                    onclick="addToCart('Arroz', 12, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6zp6_k18lYeQeQkV4aAka0Ckqnd_UgJNg3PYg9aZQ21DhmZGLCWqlhpRCO35Ht6ruuPzFxD6jxjCqak4djZo_VQzy51MeNIr_7K5mgxhxl8NunxwaUg13gHaPhl3ZjGDwGNqzMBwUwNSwHwQ2x4aV2oIbNijB1FMKGWcXIUVrztiwz-ckje_TsHyxvSw/w320-h213/A%20hist%C3%B3ria%20do%20arroz.jpeg')">Adicionar
+                    ao carrinho</button>
+            </div>
+
+        </div>
+    </section>
+    <script src="/assets/script.js"></script>
+    <script>
+        let isUserLoggedIn = false; // Variável global para armazenar o estado de login
+
+        document.getElementById('login').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Login realizado com sucesso!');
+                    isUserLoggedIn = true; // Atualiza o estado de login
+                    document.getElementById("customerFormModal").style.display = "flex";
+                    closeModal(); // Fecha o modal de login
+                } else {
+                    alert(result.error);
+                }
+            } catch (error) {
+                console.error('Erro ao realizar login:', error);
+            }
+        });
+
+
+        document.getElementById('customerForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const formObj = Object.fromEntries(formData.entries());
+
+            // Adicione os itens do carrinho ao objeto de dados
+            formObj.items = cartItems; // cartItems deve conter a lista de itens do carrinho
+
+            try {
+                const response = await fetch('/create-order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formObj)
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    // Pedido criado com sucesso
+                    console.log(result.message);
+                } else {
+                    console.error(result.error);
+                }
+            } catch (error) {
+                console.error('Erro ao enviar formulário:', error);
+            }
+        });
+
+        // Função para iniciar o checkout
+        document.querySelector('.btn_buy').addEventListener('click', () => {
+            if (cartItems.length === 0) {
+                alert("O carrinho está vazio. Adicione itens antes de comprar.");
+                return;
+            }
+
+            if (!isUserLoggedIn) {
+                openModal(); // Abre o modal de login se o usuário não estiver logado
+            } else {
+                document.getElementById("customerFormModal").style.display = "flex";
+            }
+        });
+
+        document.getElementById('register').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+            try {
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, password })
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Usuário registrado com sucesso!');
+                    // Redirecionar ou realizar outras ações após o registro bem-sucedido
+                } else {
+                    alert(result.error);
+                }
+            } catch (error) {
+                console.error('Erro ao registrar usuário:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>
