@@ -399,7 +399,7 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-/* Contêiner do carrinho */
+
 .cart {
     position: fixed;
     top: 0;
@@ -411,11 +411,11 @@ nav ul li:hover {
     transition: right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-/* Contêiner dos produtos do carrinho */
+
 #cartContent {
     padding: 1rem;
-    max-height: 60vh; /* Ajuste conforme necessário */
-    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    max-height: 60vh; 
+    overflow-y: auto; 
 }
 
 /* Cada item do carrinho */
@@ -426,44 +426,44 @@ nav ul li:hover {
     margin-bottom: 1rem;
     padding: 1rem;
     border-bottom: 1px solid #ccc;
-    position: relative; /* Adiciona um contexto para os posicionamentos absolutos dos botões */
+    position: relative; 
 }
 
-/* Estilo da imagem do produto */
+
 .cart_box img {
     width: 80px;
     height: 80px;
     object-fit: cover;
 }
 
-/* Detalhes do produto */
+
 .detail_box {
     flex: 1;
     margin-left: 1rem;
 }
 
-/* Título do produto */
+
 .cart_product_tittle {
     font-size: 1rem;
     font-weight: 500;
     margin-left: 1.3rem;
 }
 
-/* Preço do produto */
+
 .cart_price {
     font-size: 1rem;
     margin-left: 1.3rem;
     
 }
 
-/* Contêiner para a quantidade e botões */
+
 .cart_quantity_container {
     display: flex;
     align-items: center;
     gap: 0.2rem;
 }
 
-/* Botão de diminuir quantidade */
+
 .cart_decrease,
 .cart_increase {
     border: none;
@@ -480,7 +480,7 @@ nav ul li:hover {
     position: relative;
 }
 
-/* Botão de remover item */
+
 .cart_remove {
     font-size: 1.5rem;
     border: none;
@@ -491,7 +491,7 @@ nav ul li:hover {
     
 }
 
-/* Margem para botões de + e - */
+
 .cart_decrease {
     font-size: 1.5rem;
     border: none;
@@ -513,19 +513,19 @@ nav ul li:hover {
     
 }
 
-/* Campo de quantidade */
+
 .cart_quantity {
     width: 3rem;
-    height: 2rem;                  /* Define a altura do input */
-    padding: 3px;                  /* Adiciona padding */
-    text-align: center;            /* Centraliza o texto horizontalmente */
-    line-height: 1.5rem;           /* Ajusta a altura da linha para centralizar o texto verticalmente */
-    border: 1px solid #ccc;        /* Borda ao redor do input */
-    border-radius: 4px;            /* Bordas arredondadas */
-    font-size: 1rem;               /* Tamanho da fonte do número */
-    background-color: #f4f4f4;     /* Cor de fundo do input */
-    pointer-events: none;           /* Desativa interações do usuário */
-    box-sizing: border-box;        /* Inclui padding e borda no cálculo da largura e altura */
+    height: 2rem;             
+    padding: 3px;                 
+    text-align: center;           
+    line-height: 1.5rem;          
+    border: 1px solid #ccc;    
+    border-radius: 4px;            
+    font-size: 1rem;            
+    background-color: #f4f4f4;     
+    pointer-events: none;         
+    box-sizing: border-box;       
     padding-left: 1rem;
 }
 
@@ -548,21 +548,21 @@ nav ul li:hover {
     background: #fff;
     border-radius: 8px;
     padding: 20px;
-    width: 70vw; /* Aumentar a largura do modal */
-    height: 80vh; /* Definir a altura do modal */
-    max-width: 1200px; /* Limitar a largura máxima */
-    max-height: 800px; /* Limitar a altura máxima */
+    width: 70vw; 
+    height: 80vh; 
+    max-width: 1200px; 
+    max-height: 800px; 
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     animation: zoomIn 0.5s ease-out;
-    overflow: hidden; /* Evitar rolagem dentro do modal */
+    overflow: hidden; 
 }
 
-/* Estilo para o iframe dentro do modal */
+
 .modal-content iframe {
     width: 100%;
-    height: 90%; /* Ajuste conforme necessário para caber no modal */
-    border: none; /* Remover a borda do iframe */
+    height: 90%; 
+    border: none;
 }
 
 @keyframes zoomIn {
@@ -576,7 +576,7 @@ nav ul li:hover {
     }
 }
 
-/* Estilo para o botão de fechamento */
+
 .modal-close {
     position: absolute;
     top: 10px;
@@ -591,21 +591,21 @@ nav ul li:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1001; /* Certifique-se de que o botão fique sobreposto ao conteúdo do modal */
-    font-size: 1.5rem; /* Aumentar o tamanho do ícone do botão */
+    z-index: 1001; 
+    font-size: 1.5rem; 
 }
 
-/* Corrigir o tamanho do botão de fechar */
+
 .modal-close i {
     font-size: 1.2rem;
 }
 
-/* Exibir o modal ao clicar no botão de compra */
+
 .modal-overlay.active {
     display: flex;
 }
 
-/* Garantir que o overlay do modal cubra toda a tela */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -620,7 +620,7 @@ nav ul li:hover {
 }
 
 #loginRegisterModal {
-    display: none; /* O modal está oculto por padrão */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -628,10 +628,10 @@ nav ul li:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
-/* Conteúdo do modal */
+
 #modalContent {
     position: relative;
     margin: 10% auto;
@@ -644,13 +644,13 @@ nav ul li:hover {
     animation: slide-down 0.3s ease-out;
 }
 
-/* Animação de abertura */
+
 @keyframes slide-down {
     from {transform: translateY(-50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
 }
 
-/* Fechar modal */
+
 #closeModal {
     position: absolute;
     top: 10px;
@@ -666,7 +666,7 @@ nav ul li:hover {
     color: #000;
 }
 
-/* Formulário de Login e Registro */
+
 #formContainer {
     display: flex;
     flex-direction: column;
@@ -684,14 +684,14 @@ nav ul li:hover {
     display: block;
 }
 
-/* Estilo dos títulos */
+
 #loginTitle, #registerTitle {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Campos de entrada */
+
 #loginEmail, #loginPassword, #registerName, #registerEmail, #registerPassword {
     width: 100%;
     padding: 10px;
@@ -706,7 +706,7 @@ nav ul li:hover {
     outline: none;
 }
 
-/* Botões de ação */
+
 #loginButton, #registerButton {
     width: 100%;
     padding: 12px;
@@ -724,7 +724,7 @@ nav ul li:hover {
     background-color: #18d118;
 }
 
-/* Link para alternar entre login e registro */
+
 #switchToRegister, #switchToLogin {
     margin-top: 15px;
     font-size: 14px;
